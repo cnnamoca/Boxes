@@ -15,6 +15,9 @@
     float width;
     float length;
 }
-
+    
+//set instance methods
+-(void) setBoxHeight: (float)height andWidth: (float)width andLength: (float)length;
+-(float) volume;
 
 @end
