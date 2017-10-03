@@ -11,10 +11,10 @@
 @interface Box : NSObject
 //set properties
 {
-    float height;
-    float width;
-    float length;
-    float volumeOfBox;
+    float h;
+    float w;
+    float l;
+    float v;
 }
     
 //set instance methods

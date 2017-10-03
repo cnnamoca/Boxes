@@ -12,14 +12,17 @@
 
 -(void) setBoxHeight: (float)height andWidth: (float)width andLength: (float)length
     {
-        NSLog (@"Your dimensions are: %f, %f, %f", self->height, self->width, self->length);
+        h = height;
+        w = width;
+        l = length;
+        NSLog (@"Your dimensions are: %f, %f, %f", h, w, l);
     };
 
 -(float) volume;
     {
-        volumeOfBox = height * width * length;
-        NSLog (@"The volume of your box is %f", volumeOfBox);
-        return volumeOfBox;
+        v = h * w * l;
+        NSLog (@"The volume of your box is %f", v);
+        return 0;
     };
 
 @end
