@@ -10,4 +10,16 @@
 
 @implementation Box
 
+-(void) setBoxHeight: (float)height andWidth: (float)width andLength: (float)length
+    {
+        NSLog (@"Your dimensions are: %f, %f, %f", self->height, self->width, self->length);
+    };
+
+-(float) volume;
+    {
+        volumeOfBox = height * width * length;
+        NSLog (@"The volume of your box is %f", volumeOfBox);
+        return volumeOfBox;
+    };
+
 @end

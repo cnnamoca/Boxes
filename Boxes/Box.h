@@ -14,6 +14,7 @@
     float height;
     float width;
     float length;
+    float volumeOfBox;
 }
     
 //set instance methods
