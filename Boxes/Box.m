@@ -9,20 +9,52 @@
 #import "Box.h"
 
 @implementation Box
-
--(void) setBoxHeight: (float)height andWidth: (float)width andLength: (float)length
+    
+- (instancetype)initWithBoxHeight: (float)height andWidth: (float)width andLength: (float)length
     {
-        h = height;
-        w = width;
-        l = length;
-        NSLog (@"Your dimensions are: %f, %f, %f", h, w, l);
+        self = [super init];
+        if (self) {
+            self.h = height;
+            self.w = width;
+            self.l = length;
+            NSLog (@"Your dimensions are: %f, %f, %f", self.h, self.w, self.l);
+        }
+        return self;
+    }
+-(float)volume;
+    {
+        return self.h * self.w * self.l;
+        
     };
-
--(float) volume;
+    
++(void)fitBoxes:(Box *)boxA and:(Box *)boxB
     {
-        v = h * w * l;
-        NSLog (@"The volume of your box is %f", v);
-        return 0;
+        float a = boxA.h * boxA.w * boxA.l;
+        float b = boxB.h * boxB.w * boxB.l;
+        
+        int i;
+        
+        if (a > b)
+        {
+            i = a / b;
+            if (i < 1)
+            {
+                NSLog (@"Box A won't fit in Box B");
+            }else{
+            NSLog (@" Box A will fit into Box B %d times", i);
+            }
+        } else if (a < b){
+            i = b / a;
+            if (i < 1)
+            {
+                NSLog (@"Box B won't fit in Box A");
+            } else {
+                NSLog (@"Box B will fit into Box A %d times", i);
+            }
+        } else{
+            NSLog(@"You're boxes have the same volume");
+        }
+        
     };
 
 @end

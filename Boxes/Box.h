@@ -10,15 +10,13 @@
 
 @interface Box : NSObject
 //set properties
-{
-    float h;
-    float w;
-    float l;
-    float v;
-}
+    //box 1
+@property float h;
+@property float w;
+@property float l;
     
-//set instance methods
--(void) setBoxHeight: (float)height andWidth: (float)width andLength: (float)length;
+-(instancetype) initWithBoxHeight: (float)height andWidth: (float)width andLength: (float)length;
 -(float) volume;
++(void)fitBoxes:(Box *)boxA and:(Box *)boxB;
 
 @end
